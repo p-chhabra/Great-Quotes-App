@@ -1,5 +1,18 @@
+import { Fragment } from 'react/cjs/react.production.min';
+import QuoteForm from '../components/quotes/QuoteForm'
+
 const AddQuote = () => {
-    return <h1>Add Quote Page</h1>
+
+    const addQuoteHandler = (quoteData) => {
+        console.log(quoteData);
+    }
+
+    return (
+        <Fragment>
+            <h1>Add a Quote</h1>
+            <QuoteForm onAddQuote={addQuoteHandler}/>
+        </Fragment>
+    )
 }
 
 export default AddQuote;
