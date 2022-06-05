@@ -1,7 +1,8 @@
 import { Route, useParams } from "react-router-dom";
 import { Fragment } from "react/cjs/react.production.min";
 import Comments from '../components/comments/Comments'
-import HighlightedQuote from '../components/quotes/HighlightedQuote'
+import HighlightedQuote from '../components/quotes/HighlightedQuote';
+import BackButton from "../components/UI/BackButton";
 
 const DUMMY_QUOTES = [
     {id: "q1", author: 'Mangu', text: "Gotta live the Thug Life!"},
@@ -18,6 +19,7 @@ const QuoteDetail = () => {
     }
     return (
     <Fragment>
+    <BackButton title = '⬅️' path='/quotes'/>
     <HighlightedQuote text={quoteHiglighted.text} author={quoteHiglighted.author}></HighlightedQuote>
     <Route path={`/quotes/${params.quotesID}/comments`}>
         <Comments/>
