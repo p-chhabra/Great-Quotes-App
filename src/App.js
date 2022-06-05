@@ -1,6 +1,7 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import React, { useEffect, useState, Suspense } from "react";
+import LoadingSpinner from "./components/UI/LoadingSpinner";
 
 const AddQuote = React.lazy(() => import("./pages/AddQoute"));
 const AllQuotes = React.lazy(() => import("./pages/AllQuotes"));
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <Layout>
-      <Suspense>
+      <Suspense fallback={<div className="centered"><LoadingSpinner/></div>}>
         <Switch>
           <Route path="/" exact>
             <Redirect to="/quotes" />
