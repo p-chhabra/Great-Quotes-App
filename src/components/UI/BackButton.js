@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const BackButton = (props) => {
   return (
     <Link to={props.path}>
-    <button className={classes.backButton}>
+    <button className={`btn--flat ` + classes.backButton}>
         {props.title}
     </button>
     </Link>

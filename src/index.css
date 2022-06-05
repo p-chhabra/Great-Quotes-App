@@ -38,6 +38,10 @@ body {
   border-color: #11acac;
 }
 
+.no_underline{
+  text-decoration: none;
+}
+
 .btn--flat {
   cursor: pointer;
   font: inherit;
